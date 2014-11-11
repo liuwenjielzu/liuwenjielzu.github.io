@@ -65,7 +65,14 @@ by <a class="url fn" href="/author/leftcloud.html">leftcloud </a>
 </div>
 	<div class="summary"><p>Tags：pelican git markdown
 Slug：tech</p>
-<p>关于用pelican建站  网上找了很多资料</p> <a class="btn primary xsmall" href="/pelicangithubjian-zhan.html">more…</a>
+<p>花了两三天时间，翻墙看了不少别人写的blog，自己瞎捣腾乐在其中，感觉确实很有意思。本来打算研究生换到计算机能够有自己喜欢的东西去做，但是发现总是事与愿违，碰到很多恶心的人和事，不但帮不了你还在不停的拖着你。现在基本框架算是弄好了，只剩下进一步的充实内容和继续捣腾一些有意思的插件了。</p>
+<p>看别人的博客总是会有一些坑在里面，可能是具体的环境不一样或者是不够详细，自己领悟不到，在搭的时候发现几处问题：
+1. pelican
+以markdown为例，写完md文件以后，很多给出的生成网页命令是make publish/make serve， 我自己在执行的时候发现make publish会把repo下的隐藏文件夹.git给删掉，从而导致你后面用git push的时候会报错，估计是因为和之前的不同导致不能识别对应的repo。 这里我改用了pelican文档里面的pelican content，这个命令保留原来的.git。</p>
+<p>2.git
+尽量先学习操作git和github，非常优秀的工具。基本命令知道差不多就可以了。</p>
+<p>3.disqus
+这是一个第三方评论系统，只要是支持这个评论系统的blog，你只要有这一个帐号就可以一招鲜吃遍天，不用你再去注册各式各样的帐号。我觉得这是未来的趋势-精细化越来越明显 ...</p> <a class="btn primary xsmall" href="/pelicangithubjian-zhan.html">more…</a>
 	</div>
 </div>	
 
