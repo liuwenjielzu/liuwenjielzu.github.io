@@ -130,57 +130,63 @@ by <a class="url fn" href="/author/leftcloud.html">leftcloud </a>
 
 <hr />
 <h3>Python:</h3>
-<p>'''
-{
-    "cmd": ["python", "-u", "$file"],
-    "file_regex": "^[ ]<em>File \"(...</em>?)\", line ([0-9]*)",
-    "selector": "source.python"
-}
-'''</p>
+<div class="highlight"><pre><span class="err">{</span><span class="x"></span>
+<span class="x">    &quot;cmd&quot;: [&quot;python&quot;, &quot;-u&quot;, &quot;</span><span class="p">$</span><span class="nv">file</span><span class="x">&quot;],</span>
+<span class="x">    &quot;file_regex&quot;: &quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;,</span>
+<span class="x">    &quot;selector&quot;: &quot;source.python&quot;</span>
+<span class="x">}</span>
+</pre></div>
+
+
 <hr />
 <h3>Ruby (using RVM):</h3>
-<p>'''
-{
-    "cmd": ["~/.rvm/bin/rvm-auto-ruby", "$file"],
-    "file_regex": "^(...<em>?):([0-9]</em>):?([0-9]*)",
-    "selector": "source.ruby"
-}
-'''</p>
+<div class="highlight"><pre><span class="err">{</span><span class="x"></span>
+<span class="x">    &quot;cmd&quot;: [&quot;~/.rvm/bin/rvm-auto-ruby&quot;, &quot;</span><span class="p">$</span><span class="nv">file</span><span class="x">&quot;],</span>
+<span class="x">    &quot;file_regex&quot;: &quot;^(...*?):([0-9]*):?([0-9]*)&quot;,</span>
+<span class="x">    &quot;selector&quot;: &quot;source.ruby&quot;</span>
+<span class="x">}</span>
+</pre></div>
+
+
 <hr />
 <h3>PHP:</h3>
-<p>'''
-{
-    "cmd": ["/usr/bin/php", "-l", "$file"], &lt;- Could not just use "php" ?
-    "file_regex": "^Parse error: .<em> in (.</em>?) on line ([0-9]*)",
-    "selector": "source.php"
-}
-'''</p>
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="s">&quot;cmd&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s">&quot;/usr/bin/php&quot;</span><span class="p">,</span> <span class="s">&quot;-l&quot;</span><span class="p">,</span> <span class="s">&quot;$file&quot;</span><span class="p">],</span> <span class="o">&lt;-</span> Could not just use <span class="s">&quot;php&quot;</span> <span class="o">?</span>
+    <span class="s">&quot;file_regex&quot;</span><span class="o">:</span> <span class="s">&quot;^Parse error: .* in (.*?) on line ([0-9]*)&quot;</span><span class="p">,</span>
+    <span class="s">&quot;selector&quot;</span><span class="o">:</span> <span class="s">&quot;source.php&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <hr />
 <h3>.Net (Windows):</h3>
-<p>'''
-{
-    "cmd": ["%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild", "${project_base_name}.sln"],
-    "shell": true,
-    "working_dir": "${project_path:${folder}}"
+<div class="highlight"><pre>{
+    &quot;cmd&quot;: [&quot;%WINDIR%\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild&quot;, &quot;<span class="cp">${</span><span class="n">project_base_name</span><span class="cp">}</span>.sln&quot;],
+    &quot;shell&quot;: true,
+    &quot;working_dir&quot;: &quot;<span class="cp">${</span><span class="n">project_path</span><span class="p">:</span><span class="err">$</span><span class="p">{</span><span class="n">folder</span><span class="cp">}</span>}&quot;
 }
-'''</p>
+</pre></div>
+
+
 <hr />
 <h3>Haskell:</h3>
-<p>'''
-{
-    "cmd": ["runhaskell", "$file"],
-    "file_regex": "^(...<em>?):([0-9]</em>):?([0-9]*)",
-    "selector": "source.haskell"
-}
-'''</p>
+<div class="highlight"><pre><span class="err">{</span><span class="x"></span>
+<span class="x">    &quot;cmd&quot;: [&quot;runhaskell&quot;, &quot;</span><span class="p">$</span><span class="nv">file</span><span class="x">&quot;],</span>
+<span class="x">    &quot;file_regex&quot;: &quot;^(...*?):([0-9]*):?([0-9]*)&quot;,</span>
+<span class="x">    &quot;selector&quot;: &quot;source.haskell&quot;</span>
+<span class="x">}</span>
+</pre></div>
+
+
 <hr />
 <h3>Pandoc (Markdown to HTML):</h3>
-<p>'''
-{
-    "cmd": ["pandoc", "-S", "-s", "-f", "markdown", "-t", "html", "-o", "$file_base_name.html", "$file"],
-    "selector": "text.html.markdown"
-}
-'''</p>
+<div class="highlight"><pre><span class="err">{</span><span class="x"></span>
+<span class="x">    &quot;cmd&quot;: [&quot;pandoc&quot;, &quot;-S&quot;, &quot;-s&quot;, &quot;-f&quot;, &quot;markdown&quot;, &quot;-t&quot;, &quot;html&quot;, &quot;-o&quot;, &quot;</span><span class="p">$</span><span class="nv">file_base_name</span><span class="p">.</span><span class="nv">html</span><span class="x">&quot;, &quot;</span><span class="p">$</span><span class="nv">file</span><span class="x">&quot;],</span>
+<span class="x">    &quot;selector&quot;: &quot;text.html.markdown&quot;</span>
+<span class="x">}</span>
+</pre></div>
+
+
 <hr />
 <blockquote>
 <p>基本把常用的一些语言都加进来了，当然很可能你用的这里面没有，那就需要你自己去网上找了，高手们一般都会把配置贴出来。也有可能这里的配置有的不可以用，或许&gt;会出点问题，如果是这样记得留言，最后再次推荐一下这个编辑器，确实非常霸气。=]</p>
