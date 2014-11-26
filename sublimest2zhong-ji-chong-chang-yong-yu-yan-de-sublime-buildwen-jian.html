@@ -97,69 +97,90 @@ by <a class="url fn" href="/author/leftcloud.html">leftcloud </a>
 </blockquote>
 <hr />
 <h3>C：</h3>
-<p>'''{
-    "cmd": ["make &amp;&amp; ./a.out"],
-    "path": "/usr/bin:/usr/local/bin:...",
-    "shell": true
-}'''</p>
+<div class="highlight"><pre>{
+    &quot;cmd&quot;: [&quot;make &amp;&amp; ./a.out&quot;],
+    &quot;path&quot;: &quot;/usr/bin:/usr/local/bin:...&quot;,
+    &quot;shell&quot;: true
+}
+</pre></div>
+
+
 <hr />
 <h3>C++ (via g++):</h3>
-<p>'''{
-    "cmd": ["g++", "$file", "-o", "$file_base_name", "-I/usr/local/include"],
-    "selector": "source.c++",
-    "windows": {
-       "cmd": ["cl", "/Fo${file_path}", "/O2", "$file"]
+<div class="highlight"><pre>{
+    &quot;cmd&quot;: [&quot;g++&quot;, &quot;<span class="nv">$file</span>&quot;, &quot;-o&quot;, &quot;<span class="nv">$file_base_name</span>&quot;, &quot;-I/usr/local/include&quot;],
+    &quot;selector&quot;: &quot;source.c++&quot;,
+    &quot;windows&quot;: {
+       &quot;cmd&quot;: [&quot;cl&quot;, &quot;/Fo<span class="cp">${</span><span class="n">file_path</span><span class="cp">}</span>&quot;, &quot;/O2&quot;, &quot;<span class="nv">$file</span>&quot;]
     }
-}'''</p>
+}
+</pre></div>
+
+
 <hr />
 <h3>Java:</h3>
-<p>'''{
-    "cmd": ["javac", "$file_name", "&amp;&amp;", "java", "$file_base_name"],
-    "working_dir": "${project_path:${folder}}",
-    "selector": "source.java",
-    "shell": true
-}'''</p>
+<div class="highlight"><pre>{
+    &quot;cmd&quot;: [&quot;javac&quot;, &quot;<span class="nv">$file_name</span>&quot;, &quot;<span class="err">&amp;&amp;</span>&quot;, &quot;java&quot;, &quot;<span class="nv">$file_base_name</span>&quot;],
+    &quot;working_dir&quot;: &quot;<span class="cp">${</span><span class="n">project_path</span><span class="p">:</span><span class="err">$</span><span class="p">{</span><span class="n">folder</span><span class="cp">}</span>}&quot;,
+    &quot;selector&quot;: &quot;source.java&quot;,
+    &quot;shell&quot;: true
+}
+</pre></div>
+
+
 <hr />
 <h3>Python:</h3>
-<p>'''{
+<p>'''
+{
     "cmd": ["python", "-u", "$file"],
     "file_regex": "^[ ]<em>File \"(...</em>?)\", line ([0-9]*)",
     "selector": "source.python"
-}'''</p>
+}
+'''</p>
 <hr />
 <h3>Ruby (using RVM):</h3>
-<p>'''{
+<p>'''
+{
     "cmd": ["~/.rvm/bin/rvm-auto-ruby", "$file"],
     "file_regex": "^(...<em>?):([0-9]</em>):?([0-9]*)",
     "selector": "source.ruby"
-}'''</p>
+}
+'''</p>
 <hr />
 <h3>PHP:</h3>
-<p>'''{
+<p>'''
+{
     "cmd": ["/usr/bin/php", "-l", "$file"], &lt;- Could not just use "php" ?
     "file_regex": "^Parse error: .<em> in (.</em>?) on line ([0-9]*)",
     "selector": "source.php"
-}'''</p>
+}
+'''</p>
 <hr />
 <h3>.Net (Windows):</h3>
-<p>'''{
+<p>'''
+{
     "cmd": ["%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild", "${project_base_name}.sln"],
     "shell": true,
     "working_dir": "${project_path:${folder}}"
-}'''</p>
+}
+'''</p>
 <hr />
 <h3>Haskell:</h3>
-<p>'''{
+<p>'''
+{
     "cmd": ["runhaskell", "$file"],
     "file_regex": "^(...<em>?):([0-9]</em>):?([0-9]*)",
     "selector": "source.haskell"
-}'''</p>
+}
+'''</p>
 <hr />
 <h3>Pandoc (Markdown to HTML):</h3>
-<p>'''{
+<p>'''
+{
     "cmd": ["pandoc", "-S", "-s", "-f", "markdown", "-t", "html", "-o", "$file_base_name.html", "$file"],
     "selector": "text.html.markdown"
-}'''</p>
+}
+'''</p>
 <hr />
 <blockquote>
 <p>基本把常用的一些语言都加进来了，当然很可能你用的这里面没有，那就需要你自己去网上找了，高手们一般都会把配置贴出来。也有可能这里的配置有的不可以用，或许&gt;会出点问题，如果是这样记得留言，最后再次推荐一下这个编辑器，确实非常霸气。=]</p>

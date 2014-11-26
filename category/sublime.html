@@ -90,24 +90,30 @@ by <a class="url fn" href="/author/leftcloud.html">leftcloud </a>
 </blockquote>
 <hr />
 <h3>C：</h3>
-<p>'''{
-    "cmd": ["make &amp;&amp; ./a.out"],
-    "path": "/usr/bin:/usr/local/bin:...",
-    "shell": true
-}'''</p>
+<div class="highlight"><pre>{
+    &quot;cmd&quot;: [&quot;make &amp;&amp; ./a.out&quot;],
+    &quot;path&quot;: &quot;/usr/bin:/usr/local/bin:...&quot;,
+    &quot;shell&quot;: true
+}
+</pre></div>
+
+
 <hr />
 <h3>C++ (via g++):</h3>
-<p>'''{
-    "cmd": ["g++", "$file", "-o", "$file_base_name", "-I/usr/local/include"],
-    "selector": "source.c++",
-    "windows": {
-       "cmd": ["cl", "/Fo${file_path}", "/O2", "$file"]
+<div class="highlight"><pre>{
+    &quot;cmd&quot;: [&quot;g++&quot;, &quot;<span class="nv">$file</span>&quot;, &quot;-o&quot;, &quot;<span class="nv">$file_base_name</span>&quot;, &quot;-I/usr/local/include&quot;],
+    &quot;selector&quot;: &quot;source.c++&quot;,
+    &quot;windows&quot;: {
+       &quot;cmd&quot;: [&quot;cl&quot;, &quot;/Fo<span class="cp">${</span><span class="n">file_path</span><span class="cp">}</span>&quot;, &quot;/O2&quot;, &quot;<span class="nv">$file</span>&quot;]
     }
-}'''</p>
+}
+</pre></div>
+
+
 <hr />
 <h3>Java:</h3>
-<p>'''{
-    "cmd": ["javac ...</p> <a class="btn primary xsmall" href="/sublimest2zhong-ji-chong-chang-yong-yu-yan-de-sublime-buildwen-jian.html">more…</a>
+<div class="highlight"><pre>{
+    &quot;cmd&quot;: [&quot;javac ...</pre></div> <a class="btn primary xsmall" href="/sublimest2zhong-ji-chong-chang-yong-yu-yan-de-sublime-buildwen-jian.html">more…</a>
 	</div>
 </div>	
 
