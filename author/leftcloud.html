@@ -33,6 +33,7 @@
 					<li ><a href="/category/kaggle.html">Kaggle</a></li>
 					<li ><a href="/category/mood.html">mood</a></li>
 					<li ><a href="/category/pelican-git-markdown.html">pelican git markdown</a></li>
+					<li ><a href="/category/sublime.html">sublime</a></li>
 			</ul>
 			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
 		</div>
@@ -77,6 +78,38 @@
 	  </div>
 	  <div class="content">
 <div class="page-header"><h1>变相怪杰 <small>leftcloud</small></h1></div>
+<div class='article'>
+	<h2>sublime(ST2)中几种常用语言的.sublime-build文件</h2>
+	<div class="well small">Permalink: <a class="more" href="/sublimest2zhong-ji-chong-chang-yong-yu-yan-de-sublime-buildwen-jian.html">2014-11-26 00:00:00+01:00</a>
+by <a class="url fn" href="/author/leftcloud.html">leftcloud </a>
+ in <a href="/category/sublime.html">sublime</a>
+</div>
+	<div class="summary"><hr />
+<blockquote>
+<p>最近开始接触sublime text 2编辑器，这又是一款编辑神器，高度可定制，适合用于编辑各种编程语言，通过配置编译文件可以在编辑器界面执行编译命令并查看输出结果&gt;，非常方便，但是配置文件是json格式，自己不会写，网上看到别人写的一些配置，贴过来方便自己将来查看。</p>
+</blockquote>
+<hr />
+<h3>C：</h3>
+<p>'''{
+    "cmd": ["make &amp;&amp; ./a.out"],
+    "path": "/usr/bin:/usr/local/bin:...",
+    "shell": true
+}'''</p>
+<hr />
+<h3>C++ (via g++):</h3>
+<p>'''{
+    "cmd": ["g++", "$file", "-o", "$file_base_name", "-I/usr/local/include"],
+    "selector": "source.c++",
+    "windows": {
+       "cmd": ["cl", "/Fo${file_path}", "/O2", "$file"]
+    }
+}'''</p>
+<hr />
+<h3>Java:</h3>
+<p>'''{
+    "cmd": ["javac ...</p> <a class="btn primary xsmall" href="/sublimest2zhong-ji-chong-chang-yong-yu-yan-de-sublime-buildwen-jian.html">more…</a>
+	</div>
+</div>	
 <div class='article'>
 	<h2>Kaggle Contest: Blue Book for Bulldozers</h2>
 	<div class="well small">Permalink: <a class="more" href="/kaggle-contest-blue-book-for-bulldozers.html">2014-11-24 00:00:00+01:00</a>

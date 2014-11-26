@@ -33,7 +33,7 @@
 					<li ><a href="/category/kaggle.html">Kaggle</a></li>
 					<li ><a href="/category/mood.html">mood</a></li>
 					<li ><a href="/category/pelican-git-markdown.html">pelican git markdown</a></li>
-					<li ><a href="/category/sublime.html">sublime</a></li>
+					<li class="active"><a href="/category/sublime.html">sublime</a></li>
 			</ul>
 			<p class="pull-right"><a href="/archives.html">[archives]</a> <a href="/tags.html">[tags]</a></p>
 		</div>
@@ -77,17 +77,41 @@
 		</div>
 	  </div>
 	  <div class="content">
-<div class="page-header"><h1>变相怪杰 <small>[archive]</small></h1></div><h2>2014</h2>
-<h3>十一月</h3>
-<ul>
-	<li><a href="sublimest2zhong-ji-chong-chang-yong-yu-yan-de-sublime-buildwen-jian.html">sublime(ST2)中几种常用语言的.sublime-build文件</a></li>
-	<li><a href="kaggle-contest-blue-book-for-bulldozers.html">Kaggle Contest: Blue Book for Bulldozers</a></li>
-	<li><a href="wei-shi-yao-yong-githubjian-ge-ren-bo-ke.html">为什么用github建个人博客</a></li>
-	<li><a href="shi-nian-huo-ying-mi.html">十年火影迷</a></li>
-	<li><a href="2013shu-dan.html">2013书单</a></li>
-	<li><a href="guang-gun-jie.html">光棍节</a></li>
-	<li><a href="pelicangithubjian-zhan.html">pelican+github建站</a></li>
-</ul>
+<div class="page-header"><h1>变相怪杰 <small>sublime</small></h1></div>
+<div class='article'>
+	<h2>sublime(ST2)中几种常用语言的.sublime-build文件</h2>
+	<div class="well small">Permalink: <a class="more" href="/sublimest2zhong-ji-chong-chang-yong-yu-yan-de-sublime-buildwen-jian.html">2014-11-26 00:00:00+01:00</a>
+by <a class="url fn" href="/author/leftcloud.html">leftcloud </a>
+ in <a href="/category/sublime.html">sublime</a>
+</div>
+	<div class="summary"><hr />
+<blockquote>
+<p>最近开始接触sublime text 2编辑器，这又是一款编辑神器，高度可定制，适合用于编辑各种编程语言，通过配置编译文件可以在编辑器界面执行编译命令并查看输出结果&gt;，非常方便，但是配置文件是json格式，自己不会写，网上看到别人写的一些配置，贴过来方便自己将来查看。</p>
+</blockquote>
+<hr />
+<h3>C：</h3>
+<p>'''{
+    "cmd": ["make &amp;&amp; ./a.out"],
+    "path": "/usr/bin:/usr/local/bin:...",
+    "shell": true
+}'''</p>
+<hr />
+<h3>C++ (via g++):</h3>
+<p>'''{
+    "cmd": ["g++", "$file", "-o", "$file_base_name", "-I/usr/local/include"],
+    "selector": "source.c++",
+    "windows": {
+       "cmd": ["cl", "/Fo${file_path}", "/O2", "$file"]
+    }
+}'''</p>
+<hr />
+<h3>Java:</h3>
+<p>'''{
+    "cmd": ["javac ...</p> <a class="btn primary xsmall" href="/sublimest2zhong-ji-chong-chang-yong-yu-yan-de-sublime-buildwen-jian.html">more…</a>
+	</div>
+</div>	
+
+
 		<footer>
 		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
 		  <p>&copy; leftcloud</p>
